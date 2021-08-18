@@ -44,7 +44,6 @@ div.wrapper {
         position: relative;
         display: flex;
         flex-direction: column;
-        
         top: 0;
         left: 0;
         z-index: -1;
@@ -57,11 +56,44 @@ div.wrapper {
             text-align: center;
             margin-bottom: 25px;
             font-size: 36px;
-            
+
         }
 
-        p, span {
-            font-size: 12px;
+        div.cases {
+            margin: 0 25px;
+
+            div.case {
+                // height: 36px;
+                overflow: hidden;
+                border-bottom: 1px solid hsl(240, 5%, 91%);
+
+                div.question {
+                    display: flex;
+                    justify-content: space-between;
+
+                    span {
+                        font-size: 12px;
+                        line-height: 36px;
+                        color: hsl(240, 6%, 50%);
+                    }
+
+                    img {
+                        // height: 7px;
+                        // width: 10px;
+                        align-self: center;
+                    }
+                }
+
+                div.answer p {
+                    display: block;
+                    font-size: 12px;
+                    text-align: justify;
+                    margin: 0 40px 12px 0;
+                    color: hsl(240, 6%, 50%);
+                    height: 0;
+                    overflow: hidden;
+                }
+            }
         }
     }
 }

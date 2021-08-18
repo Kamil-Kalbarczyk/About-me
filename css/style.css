@@ -60,7 +60,43 @@ div.wrapper section.faq h1 {
   font-size: 36px;
 }
 
-div.wrapper section.faq p, div.wrapper section.faq span {
+div.wrapper section.faq div.cases {
+  margin: 0 25px;
+}
+
+div.wrapper section.faq div.cases div.case {
+  overflow: hidden;
+  border-bottom: 1px solid #e7e7e9;
+}
+
+div.wrapper section.faq div.cases div.case div.question {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+div.wrapper section.faq div.cases div.case div.question span {
   font-size: 12px;
+  line-height: 36px;
+  color: #787887;
+}
+
+div.wrapper section.faq div.cases div.case div.question img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+div.wrapper section.faq div.cases div.case div.answer p {
+  display: block;
+  font-size: 12px;
+  text-align: justify;
+  margin: 0 40px 12px 0;
+  color: #787887;
+  height: 0;
+  overflow: hidden;
 }
 /*# sourceMappingURL=style.css.map */
