@@ -9,13 +9,14 @@
 html {
   background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(transparent)), -webkit-gradient(linear, left bottom, left top, from(#6565e7), to(transparent));
   background: linear-gradient(to bottom, #af67e9, transparent), linear-gradient(to top, #6565e7, transparent);
+  overflow: hidden;
+  height: 100%;
 }
 
 div.wrapper {
   position: relative;
   top: 0;
   left: 0;
-  height: 100vh;
 }
 
 div.wrapper section.top {
@@ -24,6 +25,7 @@ div.wrapper section.top {
   left: 47%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  z-index: 1;
 }
 
 div.wrapper section.top .mail-box {
@@ -38,17 +40,9 @@ div.wrapper section.top img.pattern {
 
 div.wrapper section.faq {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   top: 0;
   left: 0;
-  z-index: -1;
-  margin: 150px 25px 70px;
+  margin: 150px 25px 100px;
   padding-top: 140px;
   background-color: #fff;
   border-radius: 20px;
@@ -62,11 +56,23 @@ div.wrapper section.faq h1 {
 
 div.wrapper section.faq div.cases {
   margin: 0 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 div.wrapper section.faq div.cases div.case {
+  height: 36px;
   overflow: hidden;
   border-bottom: 1px solid #e7e7e9;
+  cursor: pointer;
 }
 
 div.wrapper section.faq div.cases div.case div.question {
@@ -84,6 +90,10 @@ div.wrapper section.faq div.cases div.case div.question span {
   color: #787887;
 }
 
+div.wrapper section.faq div.cases div.case div.question span.active {
+  font-weight: bold;
+}
+
 div.wrapper section.faq div.cases div.case div.question img {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -95,8 +105,11 @@ div.wrapper section.faq div.cases div.case div.answer p {
   font-size: 12px;
   text-align: justify;
   margin: 0 40px 12px 0;
-  color: #787887;
-  height: 0;
+  color: #737396;
   overflow: hidden;
+}
+
+div.wrapper section.faq div.cases div.case.active {
+  height: auto;
 }
 /*# sourceMappingURL=style.css.map */

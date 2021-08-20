@@ -12,19 +12,22 @@ html {
     background: linear-gradient(to bottom, $soft-violet, transparent),
         linear-gradient(to top, $soft-blue, transparent);
     // background-blend-mode: screen;
+    overflow: hidden;
+    height: 100%;
 }
 
 div.wrapper {
     position: relative;
     top: 0;
     left: 0;
-    height: 100vh;
+    // height: 100%;
 
     section.top {
         position: absolute;
         top: calc(-210px/2);
         left: 47%;
         transform: translateX(-50%);
+        z-index: 1;
         // background-color: yellow;
 
         .mail-box {
@@ -42,12 +45,11 @@ div.wrapper {
 
     section.faq {
         position: relative;
-        display: flex;
-        flex-direction: column;
+        // display: flex;
+        // flex-direction: column;
         top: 0;
         left: 0;
-        z-index: -1;
-        margin: 150px 25px 70px;
+        margin: 150px 25px 100px;
         padding-top: 140px;
         background-color: #fff;
         border-radius: 20px;
@@ -61,11 +63,15 @@ div.wrapper {
 
         div.cases {
             margin: 0 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
 
             div.case {
-                // height: 36px;
+                height: 36px;
                 overflow: hidden;
                 border-bottom: 1px solid hsl(240, 5%, 91%);
+                cursor: pointer;
 
                 div.question {
                     display: flex;
@@ -75,6 +81,10 @@ div.wrapper {
                         font-size: 12px;
                         line-height: 36px;
                         color: hsl(240, 6%, 50%);
+                    }
+
+                    span.active {
+                        font-weight: bold;
                     }
 
                     img {
@@ -89,11 +99,16 @@ div.wrapper {
                     font-size: 12px;
                     text-align: justify;
                     margin: 0 40px 12px 0;
-                    color: hsl(240, 6%, 50%);
-                    height: 0;
+                    color: hsl(240, 14%, 52%);
+                    // height: 0;
                     overflow: hidden;
                 }
             }
+
+            div.case.active {
+                height: auto;
+            }
+
         }
     }
 }
