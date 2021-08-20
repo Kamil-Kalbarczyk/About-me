@@ -28,6 +28,11 @@ div.wrapper section.top {
   z-index: 1;
 }
 
+div.wrapper section.top .lady {
+  -webkit-animation: logo-move 3s linear infinite;
+          animation: logo-move 3s linear infinite;
+}
+
 div.wrapper section.top .mail-box {
   display: none;
 }
@@ -36,6 +41,8 @@ div.wrapper section.top img.pattern {
   position: absolute;
   top: 110px;
   right: 0;
+  -webkit-animation: pattern-change 3s linear infinite;
+          animation: pattern-change 3s linear infinite;
 }
 
 div.wrapper section.faq {
@@ -118,5 +125,65 @@ div.wrapper section.faq div.cases div.case div p.active {
   -webkit-transform: scale(1);
           transform: scale(1);
   margin-bottom: 12px;
+}
+
+@-webkit-keyframes logo-move {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-8%);
+            transform: translateY(-8%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes logo-move {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-8%);
+            transform: translateY(-8%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes pattern-change {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes pattern-change {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 /*# sourceMappingURL=style.css.map */

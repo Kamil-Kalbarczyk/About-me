@@ -30,6 +30,10 @@ div.wrapper {
         z-index: 1;
         // background-color: yellow;
 
+        .lady {
+            animation: logo-move 3s linear infinite;
+        }
+
         .mail-box {
             display: none;
         }
@@ -38,8 +42,7 @@ div.wrapper {
             position: absolute;
             top: 110px;
             right: 0;
-            // transform: translateX(-50%);
-            // z-index: 1;
+            animation: pattern-change 3s linear infinite;
         }
     }
 
@@ -115,5 +118,33 @@ div.wrapper {
 
 
         }
+    }
+}
+
+@keyframes logo-move {
+    0% {
+        transform: translateY(0)
+    }
+
+    50% {
+        transform: translateY(-8%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes pattern-change {
+    0% {
+        transform: scale(1)
+    }
+
+    50% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
     }
 }
