@@ -69,7 +69,6 @@ div.wrapper section.faq div.cases {
 }
 
 div.wrapper section.faq div.cases div.case {
-  height: 36px;
   overflow: hidden;
   border-bottom: 1px solid #e7e7e9;
   cursor: pointer;
@@ -100,16 +99,24 @@ div.wrapper section.faq div.cases div.case div.question img {
       align-self: center;
 }
 
-div.wrapper section.faq div.cases div.case div.answer p {
+div.wrapper section.faq div.cases div.case div p {
   display: block;
   font-size: 12px;
   text-align: justify;
-  margin: 0 40px 12px 0;
+  margin-right: 40px;
   color: #737396;
+  height: 0;
   overflow: hidden;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: .3s linear;
+  transition: .3s linear;
 }
 
-div.wrapper section.faq div.cases div.case.active {
+div.wrapper section.faq div.cases div.case div p.active {
   height: auto;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  margin-bottom: 12px;
 }
 /*# sourceMappingURL=style.css.map */

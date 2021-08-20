@@ -68,7 +68,7 @@ div.wrapper {
             justify-content: flex-end;
 
             div.case {
-                height: 36px;
+                // height: 36px;
                 overflow: hidden;
                 border-bottom: 1px solid hsl(240, 5%, 91%);
                 cursor: pointer;
@@ -94,20 +94,25 @@ div.wrapper {
                     }
                 }
 
-                div.answer p {
+                div p {
                     display: block;
                     font-size: 12px;
                     text-align: justify;
-                    margin: 0 40px 12px 0;
+                    margin-right: 40px;
                     color: hsl(240, 14%, 52%);
-                    // height: 0;
+                    height: 0;
                     overflow: hidden;
+                    transform: scale(0);
+                    transition: .3s linear;
+                }
+
+                div p.active {
+                    height: auto;
+                    transform: scale(1);
+                    margin-bottom: 12px;
                 }
             }
 
-            div.case.active {
-                height: auto;
-            }
 
         }
     }
