@@ -8,34 +8,26 @@
 $soft-violet: hsl(273, 75%, 66%);
 $soft-blue: hsl(240, 73%, 65%);
 
-html {
-    background: linear-gradient(to bottom, $soft-violet, transparent),
-        linear-gradient(to top, $soft-blue, transparent);
-    // background-blend-mode: screen;
-    overflow: hidden;
-    height: 100%;
-}
-
 div.wrapper {
     position: relative;
     top: 0;
     left: 0;
-    // height: 100%;
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(to bottom, $soft-violet, transparent),
+        linear-gradient(to top, $soft-blue, transparent);
+    background-blend-mode: screen;
 
     section.top {
         position: absolute;
-        top: calc(-210px/2);
-        left: 47%;
-        transform: translateX(-50%);
         z-index: 1;
+        top: 4%;
+        left: 47%;
+        transform: translateX(-54%);
         // background-color: yellow;
 
         .lady {
             animation: logo-move 3s linear infinite;
-        }
-
-        .mail-box {
-            display: none;
         }
 
         img.pattern {
@@ -44,37 +36,44 @@ div.wrapper {
             right: 0;
             animation: pattern-change 3s linear infinite;
         }
+
+        img.mail-box {
+            display: none;
+        }
     }
 
     section.faq {
-        position: relative;
-        // display: flex;
-        // flex-direction: column;
-        top: 0;
-        left: 0;
-        margin: 150px 25px 100px;
+        position: absolute;
+        top: calc(4% + 107px);
+        // bottom: 10%;
+        left: 2%;
+        right: 2%;
+        min-height: calc(100% - 4% - 107px - 10%);
         padding-top: 140px;
+        margin: 0 15px;
         background-color: #fff;
         border-radius: 20px;
 
         h1 {
             text-align: center;
-            margin-bottom: 25px;
+            padding-bottom: 25px;
             font-size: 36px;
-
         }
 
         div.cases {
-            margin: 0 25px;
+            padding: 0 25px;
             display: flex;
             flex-direction: column;
-            justify-content: flex-end;
+            justify-content: space-around;
+            min-height: calc(100% - 25px - 40px);
+            // background-color: #f00;
 
             div.case {
                 // height: 36px;
                 overflow: hidden;
                 border-bottom: 1px solid hsl(240, 5%, 91%);
                 cursor: pointer;
+                font-size: 12px;
 
                 div.question {
                     display: flex;
@@ -115,36 +114,41 @@ div.wrapper {
                     margin-bottom: 12px;
                 }
             }
-
-
         }
     }
-}
 
-@keyframes logo-move {
-    0% {
-        transform: translateY(0)
+    @keyframes logo-move {
+        0% {
+            transform: translateY(0)
+        }
+
+        50% {
+            transform: translateY(-8%);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
     }
 
-    50% {
-        transform: translateY(-8%);
+    @keyframes pattern-change {
+        0% {
+            transform: scale(1)
+        }
+
+        50% {
+            transform: scale(0.9);
+        }
+
+        100% {
+            transform: scale(1);
+        }
     }
 
-    100% {
-        transform: translateY(0);
-    }
-}
-
-@keyframes pattern-change {
-    0% {
-        transform: scale(1)
-    }
-
-    50% {
-        transform: scale(0.9);
-    }
-
-    100% {
-        transform: scale(1);
+    @media (orientation: landscape) {
+        section.faq {
+            left: 40%;
+            top: 10%;
+        }
     }
 }
