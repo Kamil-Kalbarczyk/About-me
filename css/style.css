@@ -6,6 +6,11 @@
   font-family: 'Kumbh Sans', sans-serif;
 }
 
+html {
+  background: -webkit-gradient(linear, left bottom, left top, from(#af67e9), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(#6565e7), to(transparent));
+  background: linear-gradient(to top, #af67e9, transparent), linear-gradient(to bottom, #6565e7, transparent);
+}
+
 div.wrapper {
   position: relative;
   top: 0;
@@ -187,6 +192,36 @@ div.wrapper section.faq div.cases div.case div p.active {
   }
 }
 
+@-webkit-keyframes logo-move-desktop {
+  0% {
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+  50% {
+    -webkit-transform: translate(-50%, -8%);
+            transform: translate(-50%, -8%);
+  }
+  100% {
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+}
+
+@keyframes logo-move-desktop {
+  0% {
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+  50% {
+    -webkit-transform: translate(-50%, -8%);
+            transform: translate(-50%, -8%);
+  }
+  100% {
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+}
+
 @media (min-height: 640px) {
   div.wrapper section.faq {
     padding-top: 140px;
@@ -270,6 +305,54 @@ div.wrapper section.faq div.cases div.case div p.active {
   }
   div.wrapper section.faq div.cases div.case div p {
     margin-right: 0;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 768px) {
+  div.wrapper section.top {
+    top: 4%;
+    left: 50%;
+  }
+  div.wrapper section.top .lady,
+  div.wrapper section.top .pattern {
+    display: none;
+  }
+  div.wrapper section.top img.mail-box,
+  div.wrapper section.top img.lady-desktop {
+    display: block;
+  }
+  div.wrapper section.top .lady-desktop {
+    left: 50%;
+  }
+  div.wrapper section.top img.mail-box {
+    position: absolute;
+    top: 37%;
+    left: 0;
+    -webkit-animation: logo-move 3s linear infinite;
+            animation: logo-move 3s linear infinite;
+  }
+  div.wrapper section.faq {
+    top: calc(4% + 215px);
+    left: 2%;
+    right: 2%;
+    min-height: calc(100% - 4% - 215px - 10%);
+    padding-top: 220px;
+  }
+  div.wrapper section.faq h1 {
+    padding-bottom: 25px;
+    font-size: 52px;
+  }
+  div.wrapper section.faq div.cases div.case {
+    font-size: 24px;
+  }
+  div.wrapper section.faq div.cases div.case div.question span {
+    line-height: 50px;
+  }
+}
+
+@media (orientation: portrait) and (min-height: 1360px) {
+  div.wrapper section.faq {
+    height: 1000px;
   }
 }
 /*# sourceMappingURL=style.css.map */

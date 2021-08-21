@@ -8,6 +8,11 @@
 $soft-violet: hsl(273, 75%, 66%);
 $soft-blue: hsl(240, 73%, 65%);
 
+html {
+    background: linear-gradient(to top, $soft-violet, transparent),
+        linear-gradient(to bottom, $soft-blue, transparent);
+}
+
 div.wrapper {
     position: relative;
     top: 0;
@@ -147,6 +152,22 @@ div.wrapper {
         }
     }
 
+    // animation-tablet
+    @keyframes logo-move-desktop {
+        0% {
+            transform: translate(-50%, 0)
+        }
+
+        50% {
+            transform: translate(-50%, -8%);
+        }
+
+        100% {
+            transform: translate(-50%, 0);
+        }
+    }
+
+    // Phones
     @media (min-height: 640px) {
         section.faq {
             padding-top: 140px;
@@ -260,6 +281,74 @@ div.wrapper {
                     }
                 }
             }
+        }
+    }
+
+    // Tablets
+    @media (orientation: portrait) and (min-width: 768px) {
+        section.top {
+            // background-color: #f00;
+            top: 4%;
+            left: 50%;
+
+            .lady,
+            .pattern {
+                display: none;
+            }
+
+            img.mail-box,
+            img.lady-desktop {
+                display: block;
+                // position: absolute;
+            }
+
+            .lady-desktop {
+                left: 50%;
+                // animation: logo-move-desktop 3s linear infinite;
+            }
+
+            img.mail-box {
+                position: absolute;
+                top: 37%;
+                left: 0;
+                animation: logo-move 3s linear infinite;
+
+            }
+        }
+
+        section.faq {
+            top: calc(4% + 215px);
+            left: 2%;
+            right: 2%;
+            min-height: calc(100% - 4% - 215px - 10%);
+            padding-top: 220px;
+
+
+            h1 {
+                padding-bottom: 25px;
+                font-size: 52px;
+            }
+
+            div.cases {
+                // min-height: calc(100% - 52px - 25px -220px);
+                // background-color: #f00;
+
+                div.case {
+                    font-size: 24px;
+
+                    div.question {
+                        span {
+                            line-height: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (orientation: portrait) and (min-height: 1360px) {
+        section.faq {
+            height: 1000px;
         }
     }
 }
