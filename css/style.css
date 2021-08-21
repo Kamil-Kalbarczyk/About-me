@@ -39,7 +39,9 @@ div.wrapper section.top img.pattern {
           animation: pattern-change 3s linear infinite;
 }
 
-div.wrapper section.top img.mail-box {
+div.wrapper section.top img.mail-box,
+div.wrapper section.top img.lady-desktop,
+div.wrapper section.top img.pattern-dekstop {
   display: none;
 }
 
@@ -49,7 +51,7 @@ div.wrapper section.faq {
   left: 2%;
   right: 2%;
   min-height: calc(100% - 4% - 107px - 10%);
-  padding-top: 140px;
+  padding-top: 100px;
   margin: 0 15px;
   background-color: #fff;
   border-radius: 20px;
@@ -57,7 +59,6 @@ div.wrapper section.faq {
 
 div.wrapper section.faq h1 {
   text-align: center;
-  padding-bottom: 25px;
   font-size: 36px;
 }
 
@@ -72,7 +73,7 @@ div.wrapper section.faq div.cases {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  min-height: calc(100% - 25px - 40px);
+  height: calc(100% - 25px - 40px);
 }
 
 div.wrapper section.faq div.cases div.case {
@@ -92,7 +93,6 @@ div.wrapper section.faq div.cases div.case div.question {
 }
 
 div.wrapper section.faq div.cases div.case div.question span {
-  font-size: 12px;
   line-height: 36px;
   color: #787887;
 }
@@ -109,7 +109,6 @@ div.wrapper section.faq div.cases div.case div.question img {
 
 div.wrapper section.faq div.cases div.case div p {
   display: block;
-  font-size: 12px;
   text-align: justify;
   margin-right: 40px;
   color: #737396;
@@ -188,10 +187,89 @@ div.wrapper section.faq div.cases div.case div p.active {
   }
 }
 
-@media (orientation: landscape) {
+@media (min-height: 640px) {
   div.wrapper section.faq {
-    left: 40%;
-    top: 10%;
+    padding-top: 140px;
+  }
+  div.wrapper section.faq h1 {
+    padding-bottom: 25px;
+  }
+}
+
+@media (orientation: portrait) and (min-height: 730px) {
+  div.wrapper section.faq h1 {
+    font-size: 46px;
+  }
+  div.wrapper section.faq div.cases div.case {
+    font-size: 16px;
+  }
+  div.wrapper section.faq div.cases div.case div.question {
+    padding-top: 20px;
+  }
+}
+
+@media (orientation: landscape) {
+  div.wrapper section.top {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    left: -4.7%;
+  }
+  div.wrapper section.faq {
+    left: 8%;
+    top: 2%;
+    right: .5%;
+    min-height: calc(100% - 2% - 2%);
+    padding: 10px;
+  }
+  div.wrapper section.faq h1 {
+    padding-left: 41%;
+  }
+  div.wrapper section.faq div.cases {
+    padding-left: 41%;
+    padding-right: 0;
+  }
+  div.wrapper section.faq div.cases div.case div p {
+    margin-right: 0;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 640px) {
+  div.wrapper section.top {
+    left: 0;
+  }
+  div.wrapper section.faq {
+    top: 5%;
+    min-height: calc(100% - 5% - 5%);
+  }
+  div.wrapper section.faq h1 {
+    padding-bottom: 25px;
+  }
+  div.wrapper section.faq div.cases div.case div p {
+    margin-right: 25px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 730px) {
+  div.wrapper section.top {
+    left: -20px;
+  }
+  div.wrapper section.faq h1 {
+    padding-left: 30%;
+    font-size: 40px;
+    padding-bottom: 15px;
+  }
+  div.wrapper section.faq div.cases {
+    padding-left: 30%;
+  }
+  div.wrapper section.faq div.cases div.case {
+    font-size: 14px;
+  }
+  div.wrapper section.faq div.cases div.case div.question {
+    padding-top: 10px;
+  }
+  div.wrapper section.faq div.cases div.case div p {
+    margin-right: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

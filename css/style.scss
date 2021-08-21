@@ -37,7 +37,9 @@ div.wrapper {
             animation: pattern-change 3s linear infinite;
         }
 
-        img.mail-box {
+        img.mail-box,
+        img.lady-desktop,
+        img.pattern-dekstop {
             display: none;
         }
     }
@@ -49,14 +51,14 @@ div.wrapper {
         left: 2%;
         right: 2%;
         min-height: calc(100% - 4% - 107px - 10%);
-        padding-top: 140px;
+        padding-top: 100px;
         margin: 0 15px;
         background-color: #fff;
         border-radius: 20px;
 
         h1 {
             text-align: center;
-            padding-bottom: 25px;
+            // padding-bottom: 5px;
             font-size: 36px;
         }
 
@@ -65,7 +67,7 @@ div.wrapper {
             display: flex;
             flex-direction: column;
             justify-content: space-around;
-            min-height: calc(100% - 25px - 40px);
+            height: calc(100% - 25px - 40px);
             // background-color: #f00;
 
             div.case {
@@ -80,7 +82,7 @@ div.wrapper {
                     justify-content: space-between;
 
                     span {
-                        font-size: 12px;
+                        // font-size: 12px;
                         line-height: 36px;
                         color: hsl(240, 6%, 50%);
                     }
@@ -98,7 +100,7 @@ div.wrapper {
 
                 div p {
                     display: block;
-                    font-size: 12px;
+                    // font-size: 12px;
                     text-align: justify;
                     margin-right: 40px;
                     color: hsl(240, 14%, 52%);
@@ -145,10 +147,119 @@ div.wrapper {
         }
     }
 
-    @media (orientation: landscape) {
+    @media (min-height: 640px) {
         section.faq {
-            left: 40%;
-            top: 10%;
+            padding-top: 140px;
+
+            h1 {
+                padding-bottom: 25px;
+            }
+        }
+    }
+
+    @media (orientation: portrait) and (min-height: 730px) {
+        section.faq {
+            h1 {
+                font-size: 46px;
+            }
+
+            div.cases {
+                div.case {
+                    font-size: 16px;
+
+                    div.question {
+                        padding-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (orientation: landscape) {
+
+        section.top {
+            top: 50%;
+            transform: translateY(-50%);
+            left: -4.7%;
+            // background-color: #f00;
+        }
+
+        section.faq {
+            left: 8%;
+            top: 2%;
+            right: .5%;
+            min-height: calc(100% - 2% - 2%);
+            padding: 10px;
+
+            h1 {
+                padding-left: 41%;
+            }
+
+            div.cases {
+                padding-left: 41%;
+                padding-right: 0;
+
+                div.case {
+                    div p {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (orientation: landscape) and (min-width: 640px) {
+
+        section.top {
+            left: 0;
+        }
+
+        section.faq {
+            top: 5%;
+            min-height: calc(100% - 5% - 5%);
+
+            h1 {
+                padding-bottom: 25px;
+            }
+
+            div.cases {
+
+                div.case {
+                    div p {
+                        margin-right: 25px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (orientation: landscape) and (min-width: 730px) {
+        section.top {
+            left: -20px;
+        }
+
+        section.faq {
+            h1 {
+                padding-left: 30%;
+                font-size: 40px;
+                padding-bottom: 15px;
+            }
+
+            div.cases {
+                padding-left: 30%;
+
+                div.case {
+                    font-size: 14px;
+
+                    div.question {
+                        padding-top: 10px;
+                    }
+
+                    div p {
+                        margin-right: 0;
+                    }
+                }
+            }
         }
     }
 }
