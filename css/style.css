@@ -321,9 +321,6 @@ div.wrapper section.faq div.cases div.case div p.active {
   div.wrapper section.top img.lady-desktop {
     display: block;
   }
-  div.wrapper section.top .lady-desktop {
-    left: 50%;
-  }
   div.wrapper section.top img.mail-box {
     position: absolute;
     top: 37%;
@@ -353,6 +350,61 @@ div.wrapper section.faq div.cases div.case div p.active {
 @media (orientation: portrait) and (min-height: 1360px) {
   div.wrapper section.faq {
     height: 1000px;
+  }
+}
+
+@media (min-width: 1024px) {
+  div.wrapper section.top {
+    top: 50%;
+    left: 20%;
+  }
+  div.wrapper section.top .lady,
+  div.wrapper section.top .pattern {
+    display: none;
+  }
+  div.wrapper section.top img.mail-box,
+  div.wrapper section.top img.lady-desktop,
+  div.wrapper section.top img.pattern-dekstop {
+    display: block;
+  }
+  div.wrapper section.top img.mail-box {
+    position: absolute;
+    z-index: 2;
+    top: 37%;
+    left: 0;
+    -webkit-animation: logo-move 3s linear infinite;
+            animation: logo-move 3s linear infinite;
+  }
+  div.wrapper section.top img.pattern-dekstop {
+    position: absolute;
+    top: -100%;
+    left: -105%;
+  }
+  div.wrapper section.top img.lady-desktop {
+    position: relative;
+    z-index: 2;
+    top: 0;
+    left: 0;
+  }
+  div.wrapper section.faq {
+    top: 50%;
+    min-height: calc(100% - 25% - 25%);
+    min-width: 799px;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  div.wrapper section.faq h1 {
+    padding-left: calc(45% - 20px);
+    padding-top: 45px;
+  }
+  div.wrapper section.faq div.cases {
+    padding-left: 45%;
+    padding-right: 20px;
+    max-height: auto;
+  }
+  div.wrapper section.faq div.cases div.case div p {
+    margin-right: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

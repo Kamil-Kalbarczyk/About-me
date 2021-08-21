@@ -302,10 +302,10 @@ div.wrapper {
                 // position: absolute;
             }
 
-            .lady-desktop {
-                left: 50%;
-                // animation: logo-move-desktop 3s linear infinite;
-            }
+            // .lady-desktop {
+            //     left: 50%;
+            //     // animation: logo-move-desktop 3s linear infinite;
+            // }
 
             img.mail-box {
                 position: absolute;
@@ -350,5 +350,74 @@ div.wrapper {
         section.faq {
             height: 1000px;
         }
+    }
+
+    // desktop
+
+    @media (min-width: 1024px) {
+        section.top {
+            // background-color: #f00;
+            top: 50%;
+            left: 20%;
+            // background-color: #f00;
+
+            .lady,
+            .pattern {
+                display: none;
+            }
+
+            img.mail-box,
+            img.lady-desktop,
+            img.pattern-dekstop {
+                display: block;
+            }
+
+            img.mail-box {
+                position: absolute;
+                z-index: 2;
+                top: 37%;
+                left: 0;
+                animation: logo-move 3s linear infinite;
+            }
+
+            img.pattern-dekstop {
+                position: absolute;
+                top: -100%;
+                left: -105%;
+            }
+
+            img.lady-desktop {
+                position: relative;
+                z-index: 2;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        section.faq {
+            top: 50%;
+            min-height: calc(100% - 25% - 25%);
+            min-width: 799px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            h1 {
+                padding-left: calc(45% - 20px);
+                padding-top: 45px;
+            }
+
+            div.cases {
+                padding-left: 45%;
+                padding-right: 20px;
+                max-height: auto;
+
+                div.case {
+                    div p {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+
     }
 }
