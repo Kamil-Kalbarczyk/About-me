@@ -9,6 +9,11 @@ $soft-violet: hsl(273, 75%, 66%);
 $soft-blue: hsl(240, 73%, 65%);
 
 html {
+    background: linear-gradient(to bottom, $soft-violet, transparent),
+        linear-gradient(to top, $soft-blue, transparent);
+}
+
+body {
     background: linear-gradient(to top, $soft-violet, transparent),
         linear-gradient(to bottom, $soft-blue, transparent);
     background-blend-mode: screen;
@@ -57,7 +62,7 @@ div.wrapper {
         left: 2%;
         right: 2%;
         min-height: calc(100% - 4% - 107px - 10%);
-        padding-top: 100px;
+        padding-top: 95px;
         margin: 0 15px;
         background-color: #fff;
         border-radius: 20px;
@@ -65,7 +70,7 @@ div.wrapper {
         h1 {
             text-align: center;
             // padding-bottom: 5px;
-            font-size: 36px;
+            font-size: 28px;
         }
 
         div.cases {
@@ -114,6 +119,10 @@ div.wrapper {
                     overflow: hidden;
                     transform: scale(0);
                     transition: .3s linear;
+
+                    i {
+                        width: 20px;
+                    }
                 }
 
                 div p.active {
@@ -174,6 +183,7 @@ div.wrapper {
             padding-top: 140px;
 
             h1 {
+                font-size: 36px;
                 padding-bottom: 25px;
             }
         }

@@ -7,6 +7,11 @@
 }
 
 html {
+  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(transparent)), -webkit-gradient(linear, left bottom, left top, from(#6565e7), to(transparent));
+  background: linear-gradient(to bottom, #af67e9, transparent), linear-gradient(to top, #6565e7, transparent);
+}
+
+body {
   background: -webkit-gradient(linear, left bottom, left top, from(#af67e9), to(transparent)), -webkit-gradient(linear, left top, left bottom, from(#6565e7), to(transparent));
   background: linear-gradient(to top, #af67e9, transparent), linear-gradient(to bottom, #6565e7, transparent);
   background-blend-mode: screen;
@@ -54,7 +59,7 @@ div.wrapper section.faq {
   left: 2%;
   right: 2%;
   min-height: calc(100% - 4% - 107px - 10%);
-  padding-top: 100px;
+  padding-top: 95px;
   margin: 0 15px;
   background-color: #fff;
   border-radius: 20px;
@@ -62,7 +67,7 @@ div.wrapper section.faq {
 
 div.wrapper section.faq h1 {
   text-align: center;
-  font-size: 36px;
+  font-size: 28px;
 }
 
 div.wrapper section.faq div.cases {
@@ -121,6 +126,10 @@ div.wrapper section.faq div.cases div.case div p {
           transform: scale(0);
   -webkit-transition: .3s linear;
   transition: .3s linear;
+}
+
+div.wrapper section.faq div.cases div.case div p i {
+  width: 20px;
 }
 
 div.wrapper section.faq div.cases div.case div p.active {
@@ -225,6 +234,7 @@ div.wrapper section.faq div.cases div.case div p.active {
     padding-top: 140px;
   }
   div.wrapper section.faq h1 {
+    font-size: 36px;
     padding-bottom: 25px;
   }
 }
