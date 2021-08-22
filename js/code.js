@@ -146,3 +146,42 @@ caseFifth.addEventListener('click', () => {
     answerThird.classList.remove('active');
     answerFourth.classList.remove('active');
 });
+
+
+// change language
+
+const enLangButton = document.querySelector('img.en');
+const plLangButton = document.querySelector('img.pl');
+
+const tittle = document.querySelector('h1');
+
+enLangButton.addEventListener('click', () => {
+    enLangButton.classList.add('change-lang');
+    plLangButton.classList.add('change-lang');
+    tittle.textContent = "About me";
+    questionFirst.textContent = "Why programming?"
+    answerFirst.textContent = "Working with code gives me pleasure and satisfaction! I spend every free moment developing my skills.";
+    questionSecond.textContent = "What can I offer your company?"
+    answerSecond.textContent = "200% commitment, willingness to solve problems, and absorb knowledge like a sponge with water."
+    questionThird.textContent = "My goals";
+    answerThird.textContent = "I chose the way of Front-End Developer. However, I'm not going to stop there. My main goal is Full Stack Developer.";
+    questionFourth.textContent = "My experience";
+    answerFourth.textContent = "I worked as a Key Account Manager. My strengths are primarily soft skills.";
+    questionFifth.textContent = "Contact details";
+});
+
+plLangButton.addEventListener('click', () => {
+    console.log(123123);
+    enLangButton.classList.remove('change-lang');
+    plLangButton.classList.remove('change-lang');
+    tittle.textContent = "O mnie";
+    questionFirst.textContent = "Dlaczego programowanie?";
+    answerFirst.textContent = "Praca z kodem sprawia mi przyjemność i satysfakcję! Każdą wolną chwilę poświęcam na rozwijanie się w tym kierunku.";
+    questionSecond.textContent = "Co dam Twojej Firmie";
+    answerSecond.textContent = "200% zaangażowania, chęci rozwiązywania problemów i chłonięcia wiedzy niczym gąbka wodę.";
+    questionThird.textContent = "Moje cele";
+    answerThird.textContent = "Wybrałem drogę Front-End Developera. Nie zamierzam jednak na tym zaprzestać. Mój nadrzędny cel to Full Stack Developer.";
+    questionFourth.textContent = "Moje doświadczenie";
+    answerFourth.textContent = "Pracowałem jako Key Account Manager. Moje atuty, to przede wszystkim umiejętności miękkie.";
+    questionFifth.textContent = "Dane kontaktowe";
+});

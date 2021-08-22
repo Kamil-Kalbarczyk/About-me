@@ -139,6 +139,45 @@ div.wrapper section.faq div.cases div.case div p.active {
   margin-bottom: 12px;
 }
 
+div.wrapper section.faq div.lang {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  width: 20px;
+}
+
+div.wrapper section.faq div.lang img {
+  width: 100%;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+div.wrapper section.faq div.lang img.en {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+div.wrapper section.faq div.lang img.en.change-lang {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+div.wrapper section.faq div.lang img.pl {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+div.wrapper section.faq div.lang img.pl.change-lang {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
 @-webkit-keyframes logo-move {
   0% {
     -webkit-transform: translateY(0);

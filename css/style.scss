@@ -132,6 +132,42 @@ div.wrapper {
                 }
             }
         }
+
+        div.lang {
+            position: absolute;
+            top: 10%;
+            right: 5%;
+            width: 20px;
+
+            img {
+                width: 100%;
+                cursor: pointer;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            img.en {
+                transform: scale(1);
+                transition: .3s;
+            }
+
+            img.en.change-lang {
+                // display: none;
+                transform: scale(0);
+            }
+
+            img.pl {
+                // display: none;
+                transform: scale(0);
+                transition: .3s;
+            }
+
+            img.pl.change-lang {
+                transform: scale(1);
+                // display: inline;
+            }
+        }
     }
 
     @keyframes logo-move {
