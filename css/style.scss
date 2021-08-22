@@ -11,6 +11,7 @@ $soft-blue: hsl(240, 73%, 65%);
 html {
     background: linear-gradient(to top, $soft-violet, transparent),
         linear-gradient(to bottom, $soft-blue, transparent);
+    background-blend-mode: screen;
 }
 
 div.wrapper {
@@ -19,9 +20,9 @@ div.wrapper {
     left: 0;
     min-height: 100vh;
     width: 100%;
-    background: linear-gradient(to bottom, $soft-violet, transparent),
-        linear-gradient(to top, $soft-blue, transparent);
-    background-blend-mode: screen;
+    // background: linear-gradient(to bottom, $soft-violet, transparent),
+    //     linear-gradient(to top, $soft-blue, transparent);
+    // background-blend-mode: screen;
 
     section.top {
         position: absolute;
@@ -351,14 +352,21 @@ div.wrapper {
             height: 1000px;
         }
     }
+}
 
-    // desktop
+// desktop
 
-    @media (min-width: 1024px) {
+@media (min-width: 1024px) {
+    div.wrapper {
+        width: 1000px;
+        position: abosulte;
+        left: 50%;
+        transform: translateX(-50%);
+
         section.top {
             // background-color: #f00;
             top: 50%;
-            left: 20%;
+            left: -50px;
             // background-color: #f00;
 
             .lady,
@@ -396,9 +404,9 @@ div.wrapper {
 
         section.faq {
             top: 50%;
+            left: 50%;
             min-height: calc(100% - 25% - 25%);
             min-width: 799px;
-            left: 50%;
             transform: translate(-50%, -50%);
 
             h1 {
@@ -413,11 +421,10 @@ div.wrapper {
 
                 div.case {
                     div p {
-                        margin-right: 0;
+                        margin-right: 25px;
                     }
                 }
             }
         }
-
     }
 }
